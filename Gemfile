@@ -5,6 +5,7 @@ gem 'pg'
 gem 'devise'
 gem 'omniauth'
 gem "omniauth-facebook"
+gem "rolify"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

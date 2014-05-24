@@ -22,7 +22,7 @@ define(function(require, exports, module) {
     AppView.prototype.constructor = AppView;
 
     AppView.DEFAULT_OPTIONS = {
-        headerSize: 98,
+        headerSize: 56,
         //footerSize: 55,
         refresherSize: 100,
     };
@@ -34,12 +34,12 @@ define(function(require, exports, module) {
         var scrollViewImageSurfacePaths = [
             'campaign1.jpg',
             'campaign2.jpg',
-            'campaign3.jpg'
+            'campaign3.jpg',
         ];
         var scrollViewImageLengths = [
             281,
-            392,
-            380
+            281,
+            281
         ];
 
         var IPHONE_HEIGHT_CONVERSION_COEFFICIENT = window.innerWidth * 0.003125; // innerWidth / 320
@@ -59,6 +59,7 @@ define(function(require, exports, module) {
         var refresher = new RefresherView(this.options);
 
         this.scrollViewWithRefresh.pipe(refresher);
+
         this.scrollViewWithRefresh.on('scrollmove', function(event) {
             refresher.handleScrollMove(event);
         }.bind(this));

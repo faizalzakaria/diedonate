@@ -1,7 +1,10 @@
 DietDonate::Application.routes.draw do
-  root to: "landing_pages#index"
+  devise_for :users, :controllers => {
+    :omniauth_callbacks => "users/omniauth_callbacks",
+    :registrations      => "users/registrations"
+  }
 
-  match '/app', :to => redirect('/index.html')
+  root to: "landing_pages#index"
 
   get '/coming_soon', :to => "landing_pages#coming_soon", as: :coming_soon
 end

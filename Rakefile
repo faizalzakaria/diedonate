@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Vinti::Application.load_tasks
+DietDonate::Application.load_tasks

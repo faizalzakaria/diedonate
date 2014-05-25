@@ -18,4 +18,4 @@ Technology we used
 
 Famo.us.
 
-Just a proved of concept on how we can used famo.us. quite interesting.
+Just a proved of concept on how we can use famo.us. quite interesting.
